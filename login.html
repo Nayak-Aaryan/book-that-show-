@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5af19, #f12711);
+    }
+
+    .container {
+      width: 380px;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subtext {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #f12711;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c2210d;
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 1rem;
+      color: #444;
+    }
+
+    .toggle-link a {
+      color: #f12711;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form {
+      display: none;
+    }
+
+    .form.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form active" id="loginForm">
+      <h2>Welcome Back!</h2>
+      <p class="subtext">Lights, camera, action!<br />Ready to book your next movie?</p>
+      <form>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <div class="toggle-link">
+        Don't have an account? <a onclick="toggleForms()">Register</a>
+      </div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="form" id="registerForm">
+      <h2>Let the Movie Magic Begin!</h2>
+      <p class="subtext">Welcome to the ultimate movie booking experience!</p>
+      <form>
+        <div class="form-group">
+          <label for="register-name">Full Name</label>
+          <input type="text" id="register-name" required />
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" required />
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" required />
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <div class="toggle-link">
+        Already have an account? <a onclick="toggleForms()">Login</a>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    function toggleForms() {
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+      loginForm.classList.toggle('active');
+      registerForm.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
