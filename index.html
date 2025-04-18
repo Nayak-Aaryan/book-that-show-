@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookThatShow</title>
+    <link rel="stylesheet" href="Movie.css">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="booking.html">
+    <link rel="stylesheet" href="aboutus.html">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">🎬BookThatShow</a></div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- Mobile Menu Icon -->
+            <ul class="nav-links">
+                <li><a href="Movie.html" onclick="setActive(this)">Home</a></li>
+                <li><a href="aboutus.html" onclick="setActive(this)">About us</a></li>
+                <li><a href="contactus.html" onclick="setActive(this)">Contact Us</a></li>
+                <button><a href="login.html">Login</a></button>
+            </ul>
+        </div>
+    </nav>
+    <!-- Now Streaming Heading -->
+    <h2 style="text-align: center; margin-top: 80px; font-size: 2rem; color: #333; padding: 10px;">Now Showing</h2>
+
+<!-- movie -->
+
+<div class="grid-container">
+    <!-- Repeat this block for each movie -->
+    <div class="movie-card">
+      <img src="war2.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>War 2</h3>
+        <p>Action / Thriller <br>
+        Hrithik Roshan, Jr NTR
+        <br>Sequel to the blockbuster "War" with a big spy universe vibe.</p>
+        <select class="showtime-select">
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+          </select>
+          <button class="book-btn" onclick="bookNow(this, 'War 2')">Book Now</button>          
+      </div>
+    </div>
+
+    <!-- Movie 2 -->
+    <div class="movie-card">
+      <img src="stree2.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Stree 2</h3>
+        <p>Genre: Horror Comedy <br>
+          Shraddha Kapoor, Rajkummar Rao <br>   
+          The spooky fun continues in the haunted town of Chanderi.</p>
+        <select class="showtime-select">
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+          </select>
+          <button class="book-btn" onclick="bookNow(this, 'Stree 2')">Book Now</button>          
+      </div>
+    </div>
+
+    <!-- Movie 3 -->
+    <div class="movie-card">
+      <img src="Metroindino.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Metro... In Dino</h3>
+        <p>Genre: Drama / Romance
+          <br>Aditya Roy Kapur, Sara Ali Khan
+          <br>Anthology of modern-day relationships with soulful music.</p>
+        <select class="showtime-select">
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="9:00 PM">9:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Metro... In Dino')">Book Now</button>  
+      </div>
+    </div>
+
+    <!-- Movie 4 -->
+    <div class="movie-card">
+      <img src="avengers.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Avengers: Secret Wars</h3>
+        <p>Genre: Superhero / Action
+          <br>
+          The biggest Marvel event yet with multiverse chaos.</p>
+        <select class="showtime-select">
+          <option value="10:30 AM">10:30 AM</option>
+          <option value="1:30 PM">1:30 PM</option>
+          <option value="7:00 PM">7:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Avengers: Secret Wars')">Book Now</button>  
+      </div>
+    </div>
+
+    <!-- Movie 5 -->
+    <div class="movie-card">
+      <img src="DeadReckoningPartTwo.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Mission: Impossible – Dead Reckoning Part Two</h3>
+        <p>Genre: Action / Thriller
+          <br>
+          Tom Cruise continues his high-stakes impossible mission saga.
+        </p>
+        <select class="showtime-select">
+          <option value="11:30 AM">11:30 AM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="8:00 PM">8:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Mission: Impossible – Dead Reckoning Part Two')">Book Now</button>  
+      </div>
+    </div>
+
+    <!-- Movie 6 -->
+    <div class="movie-card">
+      <img src="thebatman.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>The Batman: Part II</h3>
+        <p>Genre: Action / Crime / Noir<br>
+        Robert Pattinson returns as the Dark Knight in a darker Gotham.
+        </p>
+        <select class="showtime-select">
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="10:00 PM">10:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'The Batman: Part II')">Book Now</button>  
+      </div>
+    </div>
+
+    <!-- Movie 7 -->
+    <div class="movie-card">
+      <img src="umbarro.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Umbarro</h3>
+        <p>Genre: Comedy / Emotional Drama <br>
+          Vandana Pathak, Deeksha Joshi <br>  
+          A story about strength, humor, and  societal expectations.
+        </p>
+        <select class="showtime-select">
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="9:00 PM">9:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Umbarro')">Book Now</button>   
+      </div>
+    </div>
+
+    <!-- Movie 8 -->
+    <div class="movie-card">
+      <img src="chellodivas.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Chhello Divas</h3>
+        <p>Genre: Comedy / Coming-of-age <br>
+          Malhar Thakar, Yash Soni, Mitra Gadhavi, Aarjav Trivedi <br>
+          A fun story about college friends enjoying their final days together.
+        </p>
+        <select class="showtime-select">
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Chhello Divas')">Book Now</button>  
+      </div>
+    </div>
+
+    <!-- Movie 9 -->
+    <div class="movie-card">
+      <img src="vickyda.jpg" alt="Movie Poster">
+      <div class="movie-info">
+        <h3>Vickida No Varghodo </h3>
+        <p>Genre: Romantic Comedy <br>
+          A groom’s wedding turns chaotic when his ex-girlfriends show up.</p>
+        <select class="showtime-select">
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="7:00 PM">7:00 PM</option>
+        </select>
+        <button class="book-btn" onclick="bookNow(this, 'Vickida No Varghodo ')">Book Now</button>
+      </div>
+    </div>
+  </div>
+<br><br>
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About BookThatShow</h3>
+                <p>BookThatShow is your go-to platform for booking movie tickets easily. Enjoy seamless seat selection and secure payments.</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@bookthatshow.com</p>
+                <p>Phone: +91 9409294581</p>
+                <p>Address: Gujarat, India</p>
+            </div>
+
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 BookThatShow. All Rights Reserved.</p>
+        </div>
+    </footer>   
+</body>
+</html>
